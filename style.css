@@ -38,6 +38,7 @@
   color: #002d38;
   padding: 5px 10px;
   border-radius: 8px;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -94,6 +95,13 @@
   font-weight: 500;
   margin-bottom: 40px;
 }
+
+.headingOne {
+  color: #002d38;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 .paraOne {
   font-size: 16px;
   font-weight: 500;
@@ -122,6 +130,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.offerings {
+  text-align: center;
 }
 
 .offer-card {
@@ -154,10 +166,27 @@
   padding: 10px;
 }
 
+.card-info h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.card-info p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .mid-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+}
+
+.creations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 #services {
@@ -173,14 +202,35 @@
   margin-top: 40px;
 }
 
+.footer h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 .footer-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   column-gap: 30px;
   margin-bottom: 30px;
+  text-align: center;
+  color: white;
 }
 
 .socials ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.socials ul li:hover {
+  color: #00718d;
+}
+
+.contacts ul li {
   padding: 0;
   margin: 0;
   list-style: none;
