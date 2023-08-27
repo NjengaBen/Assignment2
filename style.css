@@ -49,6 +49,10 @@
   margin-right: 15px;
 }
 
+.hamburger-container {
+  display: none;
+}
+
 .welcome,
 .mid-section,
 .craft,
@@ -233,6 +237,13 @@
 
 @media screen and (max-width: 768px) {
   .nav-links {
+    display: none;
+  }
+  .hamburger-container {
+    display: block;
+    margin-right: 50px;
+  }
+  .close {
     display: none;
   }
   .welcome {
