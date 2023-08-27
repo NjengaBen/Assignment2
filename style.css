@@ -20,7 +20,7 @@
 }
 
 .header {
-  margin-top: 15px;
+  background-color: #002d38;
   margin-bottom: 20px;
 }
 
@@ -35,14 +35,16 @@
 .nav-links a {
   text-decoration: none;
   letter-spacing: 3px;
-  color: #002d38;
+  color: #fff;
   padding: 5px 10px;
   border-radius: 8px;
   transition: 0.3s;
+  transition-property: background;
+  cursor: pointer;
 }
 
 .nav-links a:hover {
-  background-color: white;
+  background-color: #00718d;
 }
 
 .nav-links a:not(:last-child) {
@@ -51,6 +53,25 @@
 
 .hamburger-container {
   display: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  transition-property: background;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  background-color: #00718d;
 }
 
 .welcome,
@@ -242,9 +263,23 @@
   .hamburger-container {
     display: block;
     margin-right: 50px;
+    color: white;
+    cursor: pointer;
+  }
+  .hamburger-container:hover {
+    color: #00718d;
   }
   .close {
     display: none;
+  }
+  .active {
+    background-color: #002d38;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 2s;
   }
   .welcome {
     grid-template-columns: 1fr;
