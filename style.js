@@ -5,7 +5,8 @@ const close = document.querySelector(".close");
 const navbar = document.querySelector(".navbar");
 const homelink = document.getElementById("homelink");
 const servicelink = document.getElementById("servicelink");
-const loginTag = document.getElementById("getRegistered");
+const registerTag = document.getElementById("getRegistered");
+const loginTag = document.getElementById("getLogged");
 const registerClass = document.querySelector(".register");
 const buttonCancel = document.getElementById("button-cancel");
 
@@ -31,10 +32,14 @@ close.addEventListener("click", () => {
   navbar.classList.remove("active");
 });
 
-loginTag.addEventListener("click", () => {
+registerTag.addEventListener("click", () => {
   registerClass.style.visibility = "visible";
 });
 
+loginTag.addEventListener("click", () => {
+  registerClass.style.visibility = "hidden";
+});
+
 buttonCancel.addEventListener("click", () => {
-  window.close();
+  registerClass.style.visibility = "hidden";
 });
