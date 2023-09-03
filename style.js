@@ -5,6 +5,9 @@ const close = document.querySelector(".close");
 const navbar = document.querySelector(".navbar");
 const homelink = document.getElementById("homelink");
 const servicelink = document.getElementById("servicelink");
+const loginTag = document.getElementById("getRegistered");
+const registerClass = document.querySelector(".register");
+const buttonCancel = document.getElementById("button-cancel");
 
 homelink.addEventListener("click", () => {
   home.style.display = "grid";
@@ -26,4 +29,12 @@ close.addEventListener("click", () => {
   hamburger.style.display = "inline-block";
   close.style.display = "none";
   navbar.classList.remove("active");
+});
+
+loginTag.addEventListener("click", () => {
+  registerClass.style.visibility = "visible";
+});
+
+buttonCancel.addEventListener("click", () => {
+  window.close();
 });
