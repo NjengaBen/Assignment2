@@ -189,11 +189,11 @@
             <h2>Join Our Bakery Club</h2>
             <form action="" class="form">
               <h3>Login</h3>
-              <input type="email">
-              <input type="password">
+              <input type="email" name="email" placeholder="Email">
+              <input type="password" name="password" placeholder="Password">
               <div class="form-info">
                 <div>
-                  <input type="checkbox"> Remember Me
+                  <input type="checkbox" name="remember-me"> Remember Me
                 </div>              
               <p>Don't have an account? <a href="#register" id="getRegistered">Register</a></p>
               </div>              
@@ -204,13 +204,13 @@
       </footer>
       <div class="register" id="register">
         <div class="register-form">
-          <form action="" class="form" id="register-form">
+          <form action="insert.php" method="POST" class="form" id="register-form">
             <h3>Register</h3>
-            <input type="first-name" placeholder="First Name">
-            <input type="last-name" placeholder="Last Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Confirm Password">
+            <input type="text" name="first-name" placeholder="First Name">
+            <input type="text" name="last-name" placeholder="Last Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="confirm-password" placeholder="Confirm Password">
             <div class="form-info">                           
             <p>Already have an account? <a href="#login" id="getLogged">Login</a></p>
             </div>  
