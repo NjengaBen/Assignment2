@@ -9,13 +9,13 @@ if(!empty($first_name) || !empty($last_name) || !empty($email) || !empty($passwo
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "NewDb";
+    $dbname = "assignmentdb";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
     if(mysqli_connect_errno()){
         die('Connect Error: '. mysqli_connect_error());
     }else{
-        $SELECT = "SELECT email From users Where email = ? Limit 1";
+        $SELECT = "SELECT email From sweet_delight_bakery Where email = ? Limit 1";
         $INSERT = "INSERT Into sweet_delight_bakery(first_name, last_name, email, password) values(?, ?, ?, ?)";
         $stmt = $conn->prepare($SELECT);
         $stmt->bind_param("s", $email);
