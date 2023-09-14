@@ -13,12 +13,12 @@ if($_SERVER["REQUEST_METHOD"]=='POST'){
     if(mysqli_connect_errno()){
         die('Connect Error: '. mysqli_connect_error());
     }else{
-        $SELECT = "SELECT email, password, first_name, last_name From sweet_delight_bakery Where email = ? LIMIT = 1";
+        $SELECT = "SELECT email, password, first_name, last_name From sweet_delight_bakery Where email = ? LIMIT 1";
         $stmt = $conn->prepare($SELECT);
         $stmt -> bind_param("s", $login_email);
         $stmt -> execute();
         $stmt -> bind_result($email, $hashed_password, $first_name, $last_name);
-        $stmmt -> fetch();
+        $stmt -> fetch();
 
         if(password_verify($login_password, $hashed_password)){
             $_SESSION['email']=$login_email;
