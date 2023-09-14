@@ -187,10 +187,10 @@
           </div>         
           <div class="login" id="login">
             <h2>Join Our Bakery Club</h2>
-            <form action="" class="form">
+            <form action="login.php" method="POST" class="form">
               <h3>Login</h3>
-              <input type="email" name="email" placeholder="Email">
-              <input type="password" name="password" placeholder="Password">
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="password" name="password" placeholder="Password" required>
               <div class="form-info">
                 <div>
                   <input type="checkbox" name="remember-me"> Remember Me
@@ -206,11 +206,11 @@
         <div class="register-form">
           <form action="insert.php" method="POST" class="form" id="register-form">
             <h3>Register</h3>
-            <input type="text" name="first-name" placeholder="First Name">
-            <input type="text" name="last-name" placeholder="Last Name">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <input type="password" name="confirm-password" placeholder="Confirm Password">
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="last-name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm Password" required>
             <div class="form-info">                           
             <p>Already have an account? <a href="#login" id="getLogged">Login</a></p>
             </div>  

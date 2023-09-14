@@ -3,9 +3,10 @@ $first_name = $_POST['first-name'];
 $last_name = $_POST['last-name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $confirm_password = $_POST['confirm-password'];
 
-if(!empty($first_name) || !empty($last_name) || !empty($email) || !empty($password) || !empty($confirm_password)){
+if(!empty($first_name) || !empty($last_name) || !empty($email) || !empty($hashed_password) || !empty($confirm_password)){
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
@@ -27,7 +28,7 @@ if(!empty($first_name) || !empty($last_name) || !empty($email) || !empty($passwo
         if($rnum == 0){
             $stmt->close();
             $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("ssss", $first_name, $last_name, $email, $password);
+            $stmt->bind_param("ssss", $first_name, $last_name, $email, $hashed_password);
             $stmt->execute();
             echo "New record inserted sucessfully";
         }else{
